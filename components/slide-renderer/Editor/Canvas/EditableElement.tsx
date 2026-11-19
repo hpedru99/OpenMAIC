@@ -90,7 +90,7 @@ export function EditableElement({
     if (elementInfo.lock) {
       return [
         {
-          text: '解锁',
+          text: 'Desbloquear',
           handler: () => unlockElement(elementInfo),
         },
       ];
@@ -98,120 +98,120 @@ export function EditableElement({
 
     return [
       {
-        text: '剪切',
+        text: 'Recortar',
         subText: 'Ctrl + X',
         handler: cutElement,
       },
       {
-        text: '复制',
+        text: 'Copiar',
         subText: 'Ctrl + C',
         handler: copyElement,
       },
       {
-        text: '粘贴',
+        text: 'Colar',
         subText: 'Ctrl + V',
         handler: pasteElement,
       },
       { divider: true },
       {
-        text: '水平居中',
+        text: 'Centralizar horizontalmente',
         handler: () => alignElementToCanvas(ElementAlignCommands.HORIZONTAL),
         children: [
           {
-            text: '水平垂直居中',
+            text: 'Centralizar na horizontal e vertical',
             handler: () => alignElementToCanvas(ElementAlignCommands.CENTER),
           },
           {
-            text: '水平居中',
+            text: 'Centralizar horizontalmente',
             handler: () => alignElementToCanvas(ElementAlignCommands.HORIZONTAL),
           },
           {
-            text: '左对齐',
+            text: 'Alinhar à esquerda',
             handler: () => alignElementToCanvas(ElementAlignCommands.LEFT),
           },
           {
-            text: '右对齐',
+            text: 'Alinhar à direita',
             handler: () => alignElementToCanvas(ElementAlignCommands.RIGHT),
           },
         ],
       },
       {
-        text: '垂直居中',
+        text: 'Centralizar verticalmente',
         handler: () => alignElementToCanvas(ElementAlignCommands.VERTICAL),
         children: [
           {
-            text: '水平垂直居中',
+            text: 'Centralizar na horizontal e vertical',
             handler: () => alignElementToCanvas(ElementAlignCommands.CENTER),
           },
           {
-            text: '垂直居中',
+            text: 'Centralizar verticalmente',
             handler: () => alignElementToCanvas(ElementAlignCommands.VERTICAL),
           },
           {
-            text: '顶部对齐',
+            text: 'Alinhar em cima',
             handler: () => alignElementToCanvas(ElementAlignCommands.TOP),
           },
           {
-            text: '底部对齐',
+            text: 'Alinhar embaixo',
             handler: () => alignElementToCanvas(ElementAlignCommands.BOTTOM),
           },
         ],
       },
       { divider: true },
       {
-        text: '置于顶层',
+        text: 'Trazer para frente',
         disable: isMultiSelect && !elementInfo.groupId,
         handler: () => orderElement(elementInfo, ElementOrderCommands.TOP),
         children: [
           {
-            text: '置于顶层',
+            text: 'Trazer para frente',
             handler: () => orderElement(elementInfo, ElementOrderCommands.TOP),
           },
           {
-            text: '上移一层',
+            text: 'Avançar uma camada',
             handler: () => orderElement(elementInfo, ElementOrderCommands.UP),
           },
         ],
       },
       {
-        text: '置于底层',
+        text: 'Enviar para trás',
         disable: isMultiSelect && !elementInfo.groupId,
         handler: () => orderElement(elementInfo, ElementOrderCommands.BOTTOM),
         children: [
           {
-            text: '置于底层',
+            text: 'Enviar para trás',
             handler: () => orderElement(elementInfo, ElementOrderCommands.BOTTOM),
           },
           {
-            text: '下移一层',
+            text: 'Recuar uma camada',
             handler: () => orderElement(elementInfo, ElementOrderCommands.DOWN),
           },
         ],
       },
       { divider: true },
       {
-        text: '设置链接',
+        text: 'Definir link',
         handler: openLinkDialog,
         disable: true,
       },
       {
-        text: elementInfo.groupId ? '取消组合' : '组合',
+        text: elementInfo.groupId ? 'Desagrupar' : 'Agrupar',
         subText: 'Ctrl + G',
         handler: elementInfo.groupId ? uncombineElements : combineElements,
         hide: !isMultiSelect,
       },
       {
-        text: '全选',
+        text: 'Selecionar tudo',
         subText: 'Ctrl + A',
         handler: selectAllElements,
       },
       {
-        text: '锁定',
+        text: 'Bloquear',
         subText: 'Ctrl + L',
         handler: lockElement,
       },
       {
-        text: '删除',
+        text: 'Excluir',
         subText: 'Delete',
         handler: deleteElement,
       },

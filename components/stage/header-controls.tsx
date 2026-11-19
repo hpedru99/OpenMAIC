@@ -34,6 +34,7 @@ import { useVideoRenderStore } from '@/lib/store/video-render';
 import { CircularProgress } from '@/components/ui/circular-progress';
 import { VideoExportDialog } from './video-export-dialog';
 import { LanguageSwitcher } from '../language-switcher';
+import { PomodoroTimer } from '@/components/study/pomodoro-timer';
 import { SettingsDialog } from '../settings';
 import {
   DropdownMenu,
@@ -451,6 +452,8 @@ export function HeaderControls({
         >
           {/* Language — Radix DropdownMenu so its menu portals to body
             and never gets clipped by an ancestor's overflow-hidden. */}
+          {showCourseActions ? <PomodoroTimer compact={compact} /> : null}
+
           <LanguageSwitcher />
 
           {/* Theme — same Portal-backed DropdownMenu pattern. Non-modal keeps

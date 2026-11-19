@@ -198,48 +198,48 @@ export function Canvas(_props: CanvasProps) {
   const contextmenus = (): ContextmenuItem[] => {
     return [
       {
-        text: '粘贴',
+        text: 'Colar',
         subText: 'Ctrl + V',
         handler: pasteElement,
       },
       {
-        text: '全选',
+        text: 'Selecionar tudo',
         subText: 'Ctrl + A',
         handler: selectAllElements,
       },
       {
-        text: '标尺',
+        text: 'Régua',
         subText: showRuler ? '√' : '',
         handler: () => setRulerState(!showRuler),
       },
       {
-        text: '网格线',
+        text: 'Linhas de grade',
         handler: () => setGridLineSize(gridLineSize ? 0 : 50),
         children: [
           {
-            text: '无',
+            text: 'Nenhum',
             subText: gridLineSize === 0 ? '√' : '',
             handler: () => setGridLineSize(0),
           },
           {
-            text: '小',
+            text: 'Pequeno',
             subText: gridLineSize === 25 ? '√' : '',
             handler: () => setGridLineSize(25),
           },
           {
-            text: '中',
+            text: 'Médio',
             subText: gridLineSize === 50 ? '√' : '',
             handler: () => setGridLineSize(50),
           },
           {
-            text: '大',
+            text: 'Grande',
             subText: gridLineSize === 100 ? '√' : '',
             handler: () => setGridLineSize(100),
           },
         ],
       },
       {
-        text: '重置当前页',
+        text: 'Redefinir página atual',
         handler: deleteAllElements,
       },
     ];

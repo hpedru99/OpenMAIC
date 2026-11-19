@@ -3443,5 +3443,21 @@
       },
       "close": "Close guide"
     }
+  },
+  "study": {
+    "title": "Study pomodoro",
+    "focus": "Focus",
+    "break": "Break",
+    "start": "Start",
+    "pause": "Pause",
+    "reset": "Reset",
+    "focusDone": "Focus block done! Time for a break.",
+    "breakDone": "Break over. Ready for the next focus?",
+    "sessionStats": "This session: {{minutes}} min focus · {{blocks}} pomodoro(s)",
+    "autoSummary": "Auto summary to Obsidian when focus ends",
+    "saveSummary": "Save summary to Obsidian",
+    "summarySaved": "Summary saved to Obsidian: {{file}}",
+    "summaryFailed": "Could not save the summary: {{error}}",
+    "nothingToSummarize": "This lesson has no narration to summarize yet."
   }
 }

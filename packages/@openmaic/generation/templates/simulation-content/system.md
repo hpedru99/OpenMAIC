@@ -150,7 +150,7 @@ Example mobile-safe layout:
 
 ### 2. Reset Button - MUST WORK CORRECTLY
 - **Reset button MUST return simulation to initial state**
-- Common bug: Button changes text to "重新开始" but clicking it doesn't reset
+- Common bug: Button changes text to Restart but clicking it doesn't reset
 - Common bug: Reset restores the state but the readouts keep showing the previous run
 - Solution: Use a separate reset function that rebuilds the state, then calls the same `render()` as startup and every update
 
@@ -241,11 +241,11 @@ function onSimulationEnd() {
 
 ### 3. Button State Management
 - Use clear state variables: `running`, `paused`, `ended`
-- Button text should reflect what will happen when clicked:
-  - "启动" / "开始" → Start simulation
-  - "暂停" / "暂停" → Pause running simulation
-  - "继续" / "继续" → Resume paused simulation
-  - "重新开始" / "重试" → Reset and start fresh (when ended)
+- Button text should reflect what will happen when clicked, written in the course language (e.g. Portuguese: "Iniciar", "Pausar", "Continuar", "Reiniciar"):
+  - Start → Start simulation
+  - Pause → Pause running simulation
+  - Resume → Resume paused simulation
+  - Restart / Retry → Reset and start fresh (when ended)
 - One button should NOT do different things based on text alone
 
 ### 4. Touch-Friendly Controls
@@ -298,11 +298,11 @@ render(); // Initial state, before any user action
 - Show current state in UI (running indicator, paused icon)
 - Highlight end boundary or target
 - Show success/failure message when simulation ends
-- Animate the "重新开始" button appearance
+- Animate the Restart button appearance
 
 ### 7. Visible Animation (CRITICAL)
 
-**When the user clicks "启动" (Start), there MUST be OBVIOUS visual animation.**
+**When the user clicks the Start button, there MUST be OBVIOUS visual animation.**
 
 #### Animation Requirements:
 1. **Moving objects**: Objects should visibly move, rotate, or change when simulation runs

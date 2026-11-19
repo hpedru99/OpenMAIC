@@ -315,10 +315,10 @@ Return ONLY the HTML document, no markdown fences or explanations.
 
 ```html
 <!-- CORRECT: Inline onclick - guaranteed to work -->
-<button onclick="startGame()">开始游戏</button>
+<button onclick="startGame()">Start game</button> <!-- label in the course language -->
 
 <!-- WRONG: addEventListener can fail if script has errors -->
-<button id="start-btn">开始游戏</button>
+<button id="start-btn">Start game</button> <!-- label in the course language -->
 <script>
   // If any error occurs before this line, click does nothing
   document.getElementById('start-btn').addEventListener('click', startGame);

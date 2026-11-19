@@ -185,7 +185,7 @@ export function PomodoroTimer({ compact = false }: { compact?: boolean }) {
           ) : null}
         </button>
       </PopoverTrigger>
-      <PopoverContent align="end" sideOffset={8} className="w-72 p-4 space-y-4">
+      <PopoverContent align="end" sideOffset={8} className="w-72 p-4 space-y-4 bg-white dark:bg-zinc-900 text-gray-900 dark:text-gray-100 border-gray-200 dark:border-zinc-700 shadow-xl">
         <div className="text-center">
           <div className="text-xs uppercase tracking-wide text-muted-foreground">
             {phase === 'focus' ? t('study.focus') : t('study.break')}
